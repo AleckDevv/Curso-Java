@@ -92,12 +92,12 @@ public class Operadores {
          * passa a ser true
          */
 
-        int valor1 = 1;
-        int valor2 = 2;
+        /* int valor1 = 1;
+        int valor2 = 2; */
 
-        boolean resultado1 = (valor1 == valor1) && (valor2 == valor2);
+        /* boolean resultado1 = (valor1 == valor1) && (valor2 == valor2);
         boolean resultado2 = (valor1 == valor1) || (valor2 == valor2);
         System.out.println("valor1 é 1 and valor2 é 2 - resultado: " + resultado1);
-        System.out.println("valor1 é 1 or valor2 é 2 - resultado: " + resultado2);
+        System.out.println("valor1 é 1 or valor2 é 2 - resultado: " + resultado2); */
     }
 }

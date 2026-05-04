@@ -142,15 +142,108 @@ public class ExerciciosJavaAula13 {
          * }
          */
 
-        System.out.println("Digite o peso da pescaria");
-        double pesoPescado = scan.nextDouble();
+        /*
+         * Exercício 13
+         * System.out.println("Digite o peso da pescaria");
+         * double pesoPescado = scan.nextDouble();
+         * 
+         * double pesoPermitido = 50;
+         * double valorMultaPorKg = 4;
+         * 
+         * double execesso = 0;
+         * double multa = 0;
+         * 
+         * if (pesoPescado > pesoPermitido) {
+         * execesso = pesoPescado - pesoPermitido;
+         * multa = execesso * valorMultaPorKg;
+         * }
+         * 
+         * System.out.println("Execesso: " + execesso + "KG");
+         * System.out.println("Multa: R$ " + multa);
+         */
 
-        double pesoPermitido = 50;
-        double valorMulta = 4;
+        /*
+         * Exercício 14
+         * System.out.println("Quanto você ganha por hora?");
+         * double valorHora = scan.nextDouble();
+         * 
+         * System.out.println("Quantas horas você trabalhou no mês?");
+         * double horasTrabalhadasMes = scan.nextDouble();
+         * 
+         * double impostoDeRenda = 11;
+         * impostoDeRenda = impostoDeRenda / 100;
+         * 
+         * double inss = 8;
+         * inss = inss / 100;
+         * 
+         * double sindicato = 5;
+         * sindicato = sindicato / 100;
+         * 
+         * double salarioBruto = valorHora * horasTrabalhadasMes;
+         * 
+         * double descontIr = salarioBruto * impostoDeRenda;
+         * double descontoInss = salarioBruto * inss;
+         * double descontoSindicato = salarioBruto * sindicato;
+         * 
+         * double salarioLiquido = salarioBruto - descontIr - descontoInss -
+         * descontoSindicato;
+         * 
+         * System.out.printf("Salário Bruto: R$ %.2f%n", salarioBruto);
+         * System.out.printf("IR (11%%): R$ %.2f%n", descontIr);
+         * System.out.printf("INSS (8%%): R$ %.2f%n", descontoInss);
+         * System.out.printf("Sindicato (5%%): R$ %.2f%n", descontoSindicato);
+         * System.out.printf("Salário Líquido: R$ %.2f%n", salarioLiquido);
+         */
 
-        if (pesoPescado > pesoPermitido) {
-            pesoPescado += valorMulta;
+        // converter área em litros
+        /*
+         * litros = area / 6
+         *
+         * Aplicando folga
+         * litros = litros * 1.1
+         * 
+         * Estratégia de arredontamento - usar o Math.ceil()
+         */
+
+        System.out.println("Digite o tamanho da área em m²:");
+        double area = scan.nextDouble();
+
+        // litros necessários com folga
+        double litros = (area / 6) * 1.1;
+
+        // constantes
+        double capacidadeLata = 18;
+        double precoLata = 80;
+        double capacidadeGalao = 3.6;
+        double precoGalao = 25;
+
+        // cenário 1: Apenas latas
+        int latas = (int) Math.ceil(litros / capacidadeLata);
+        double custoLatas = latas * precoLata;
+
+        // cenário 2: Apenas galões
+        int galoes = (int) Math.ceil(litros / capacidadeGalao);
+        double custoGaloes = galoes * precoGalao;
+
+        // cenário 3: misturado
+        int latasMistura = (int) Math.ceil(litros / capacidadeLata);
+        double restante = litros - (latasMistura * capacidadeLata);
+        int galoesMistura = (int) Math.ceil(restante / capacidadeLata);
+
+        // caso especial
+        double custoMistura = (latasMistura * precoLata) + (galoesMistura * precoGalao);
+        double custoAlternativo = (latasMistura + 1) * precoLata;
+
+        if (custoAlternativo < custoMistura) {
+            latasMistura += 1;
+            galoesMistura = 0;
+            custoMistura = custoAlternativo;
         }
+
+        // resultado
+        System.err.printf("Apenas latas: %d unidades - R$ %.2f%n", latas, custoLatas);
+        System.err.printf("Apenas galões: %d unidades - R$ %.2f%n", galoes, custoGaloes);
+        System.err.printf("Misturado: %d latas e %d galoões - R$ %.2f%n", latasMistura, galoesMistura, custoMistura);
 
         scan.close();
     }
