@@ -1,5 +1,5 @@
 Exercício 1:  https://pt.slideshare.net/slideshow/curso-java-bsico-exerccios-aulas-11-12-13/43425024
-Exercício2:  https://pt.slideshare.net/slideshow/curso-java-basico-exercicios-aulas-14-15/43612144
-Exercício3:  https://pt.slideshare.net/slideshow/curso-java-basico-exercicios-aulas-16-17/43612642
-Exercício4: https://pt.slideshare.net/slideshow/curso-java-basico-exercicios-aula-19/43740006
-
+Exercício 2:  https://pt.slideshare.net/slideshow/curso-java-basico-exercicios-aulas-14-15/43612144
+Exercício 3:  https://pt.slideshare.net/slideshow/curso-java-basico-exercicios-aulas-16-17/43612642
+Exercício 4: https://pt.slideshare.net/slideshow/curso-java-basico-exercicios-aula-19/43740006
+Exercício 5: https://pt.slideshare.net/slideshow/curso-java-basico-exercicios-aula-20/47027493
